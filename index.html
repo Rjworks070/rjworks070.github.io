@@ -57,6 +57,10 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.8rem,6.5vw,5.2rem);f
 .hg{background:linear-gradient(95deg,var(--or) 20%,var(--bl2) 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hsub{color:var(--mu2);font-size:1.05rem;max-width:520px;margin:0 auto 2.4rem;line-height:1.75}
 .hctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.hctas-wrap{display:flex;align-items:center;justify-content:center;gap:1.8rem;flex-wrap:wrap;margin-top:.5rem}
+.hphoto{width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid var(--or);flex-shrink:0;box-shadow:0 0 24px rgba(255,90,26,.25)}
+.hctas-wrap .hctas{flex-direction:column;align-items:stretch;gap:.8rem}
+@media(max-width:480px){.hctas-wrap{flex-direction:column}.hphoto{width:130px;height:130px}}
 .btor{background:var(--or);color:#fff;padding:.82rem 2rem;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-weight:600;text-decoration:none;font-size:.9rem;transition:background .2s,transform .15s;display:inline-flex;align-items:center;gap:.5rem}
 .btor:hover{background:var(--or2);transform:translateY(-2px)}
 .btgh{background:transparent;color:var(--tx);border:1px solid var(--brd);padding:.82rem 2rem;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-weight:500;text-decoration:none;font-size:.9rem;transition:border-color .2s,color .2s,transform .15s}
@@ -194,12 +198,15 @@ footer p{color:var(--mu);font-size:.77rem}
     <div class="badge"><span class="dot"></span> Available for Projects</div>
     <h1>Edits That Make<br><span class="hg">People Stay.</span></h1>
     <p class="hsub">Retention-focused video editing for creators, coaches &amp; brands. Hook design. Smart pacing. Premium visuals — built to grow your channel.</p>
-    <div class="hctas">
-      <a href="#portfolio" class="btor">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        View My Work
-      </a>
-      <a href="https://wa.me/918602579914" target="_blank" rel="noopener" class="btgh">WhatsApp Me →</a>
+    <div class="hctas-wrap">
+      <img src="assets/images/profile.jpg" alt="RJ" class="hphoto">
+      <div class="hctas">
+        <a href="#portfolio" class="btor">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          View My Work
+        </a>
+        <a href="https://wa.me/918602579914" target="_blank" rel="noopener" class="btgh">WhatsApp Me →</a>
+      </div>
     </div>
   </div>
 </section>
