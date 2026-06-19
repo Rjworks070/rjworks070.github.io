@@ -1,2 +1,398 @@
-# Portfolio-
-A premium video editing portfolio showcasing high-retention edits, creative storytelling, and content designed to boost engagement across social media platforms.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RJ Creative Media | Video Editor</title>
+<meta name="description" content="Retention-focused video editing for creators, coaches and brands. Hook design. Smart pacing. Premium visuals."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07090F;--bg2:#0C0F1A;--bg3:#111627;
+  --or:#FF5A1A;--or2:#FF7A40;
+  --bl:#2B6EFF;--bl2:#5C8FFF;
+  --tx:#EFF1F8;--mu:#6B7591;--mu2:#9099B5;
+  --brd:rgba(255,255,255,0.07)
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* PRELOADER */
+#pl{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;align-items:center;justify-content:center;transition:opacity .5s .1s}
+#pl.hide{opacity:0;pointer-events:none}
+.pl-brand{font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:700;background:linear-gradient(100deg,var(--or),var(--bl2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center}
+.pl-bar{width:160px;height:2px;background:rgba(255,255,255,.08);border-radius:2px;margin:1rem auto 0;overflow:hidden}
+.pl-bar::after{content:'';display:block;height:100%;width:0;background:linear-gradient(90deg,var(--or),var(--bl));border-radius:2px;animation:pload 2s ease forwards}
+@keyframes pload{to{width:100%}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 5vw;background:rgba(7,9,15,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
+.nlogo{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;background:linear-gradient(90deg,var(--or),var(--bl2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+.nlinks{display:flex;gap:2rem;list-style:none}
+.nlinks a{color:var(--mu);text-decoration:none;font-size:.84rem;font-family:'Space Grotesk',sans-serif;font-weight:500;transition:color .2s;letter-spacing:.02em}
+.nlinks a:hover{color:var(--tx)}
+.ncta{background:var(--or);color:#fff;text-decoration:none;padding:.52rem 1.3rem;border-radius:7px;font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:600;transition:background .2s,transform .15s}
+.ncta:hover{background:var(--or2);transform:translateY(-1px)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.ham span{width:22px;height:2px;background:var(--tx);border-radius:2px;display:block;transition:.3s}
+@media(max-width:720px){
+  .nlinks{display:none;flex-direction:column;gap:1.4rem;position:absolute;top:100%;left:0;right:0;background:var(--bg2);padding:1.5rem 5vw;border-bottom:1px solid var(--brd)}
+  .nlinks.open{display:flex}
+  .ham{display:flex}
+}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:9rem 5vw 5rem;position:relative;overflow:hidden}
+.hbg{position:absolute;inset:0;pointer-events:none}
+.hbg::before{content:'';position:absolute;top:-5%;left:50%;transform:translateX(-50%);width:80vw;max-width:900px;height:65vh;background:radial-gradient(ellipse at center,rgba(255,90,26,.13) 0%,rgba(43,110,255,.09) 45%,transparent 70%);border-radius:50%}
+.hgrid{position:absolute;inset:0;background-image:linear-gradient(var(--brd) 1px,transparent 1px),linear-gradient(90deg,var(--brd) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 20%,transparent 80%);opacity:.45}
+.hi{position:relative;max-width:860px}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(43,110,255,.1);border:1px solid rgba(43,110,255,.22);border-radius:50px;padding:.28rem .9rem;font-family:'Space Grotesk',sans-serif;font-size:.7rem;font-weight:600;color:var(--bl2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.8rem}
+.dot{width:7px;height:7px;border-radius:50%;background:#22D96A;box-shadow:0 0 8px #22D96A;animation:blink 1.5s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.8rem,6.5vw,5.2rem);font-weight:700;line-height:1.08;letter-spacing:-.025em;margin-bottom:1.3rem}
+.hg{background:linear-gradient(95deg,var(--or) 20%,var(--bl2) 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hsub{color:var(--mu2);font-size:1.05rem;max-width:520px;margin:0 auto 2.4rem;line-height:1.75}
+.hctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btor{background:var(--or);color:#fff;padding:.82rem 2rem;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-weight:600;text-decoration:none;font-size:.9rem;transition:background .2s,transform .15s;display:inline-flex;align-items:center;gap:.5rem}
+.btor:hover{background:var(--or2);transform:translateY(-2px)}
+.btgh{background:transparent;color:var(--tx);border:1px solid var(--brd);padding:.82rem 2rem;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-weight:500;text-decoration:none;font-size:.9rem;transition:border-color .2s,color .2s,transform .15s}
+.btgh:hover{border-color:var(--bl2);color:var(--bl2);transform:translateY(-2px)}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--bg2);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd)}
+.si{padding:2.2rem 1.5rem;text-align:center;border-right:1px solid var(--brd)}
+.si:last-child{border-right:none}
+.sn{font-family:'Space Grotesk',sans-serif;font-size:2.1rem;font-weight:700;background:linear-gradient(90deg,var(--or),var(--bl2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sl{font-size:.7rem;color:var(--mu);text-transform:uppercase;letter-spacing:.09em;margin-top:.25rem}
+@media(max-width:600px){.stats{grid-template-columns:repeat(2,1fr)}.si:nth-child(2){border-right:none}.si:nth-child(3){border-top:1px solid var(--brd)}}
+
+/* TICKER */
+.twrap{overflow:hidden;background:var(--bg3);border-bottom:1px solid var(--brd);padding:.8rem 0;white-space:nowrap}
+.tinner{display:inline-flex;animation:scroll 32s linear infinite}
+.tinner span{font-family:'Space Grotesk',sans-serif;font-size:.74rem;font-weight:500;letter-spacing:.06em;color:var(--mu);padding:0 1.4rem}
+.tinner .tsep{color:var(--or);padding:0 .2rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* SECTION */
+section{padding:6.5rem 5vw}
+.ey{font-family:'Space Grotesk',sans-serif;font-size:.67rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--or);margin-bottom:.8rem}
+.sh{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:700;line-height:1.2;margin-bottom:1rem}
+.sd{color:var(--mu2);line-height:1.75;max-width:520px}
+
+/* PHILOSOPHY */
+#about{background:var(--bg2)}
+.phwrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.phq{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;line-height:1.22}
+.phq em{font-style:italic;font-family:'DM Sans',sans-serif;background:linear-gradient(90deg,var(--or),var(--bl2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.phb{color:var(--mu2);line-height:1.8;margin-top:1.1rem}
+@media(max-width:768px){.phwrap{grid-template-columns:1fr;gap:2.5rem}}
+
+/* SERVICES */
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--brd);margin-top:3.5rem;border:1px solid var(--brd)}
+.scard{background:var(--bg);padding:2.6rem 2.1rem;position:relative;overflow:hidden;transition:background .25s;cursor:default}
+.scard:hover{background:var(--bg2)}
+.scard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--or),var(--bl));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.scard:hover::after{transform:scaleX(1)}
+.sic{font-size:1.7rem;margin-bottom:1.1rem}
+.sname{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.98rem;margin-bottom:.55rem}
+.sdesc{color:var(--mu);font-size:.85rem;line-height:1.7}
+.stag{display:inline-block;margin-top:1.2rem;font-size:.66rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--bl2);background:rgba(43,110,255,.1);border-radius:4px;padding:.17rem .52rem}
+@media(max-width:1024px){.sgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.sgrid{grid-template-columns:1fr}}
+
+/* PORTFOLIO */
+#portfolio{background:var(--bg2)}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.8rem}
+.pc{background:var(--bg3);border-radius:12px;border:1px solid var(--brd);overflow:hidden;cursor:pointer;transition:transform .22s,border-color .22s}
+.pc:hover{transform:translateY(-5px);border-color:var(--or)}
+.pthumb{width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background-size:cover;background-position:center}
+.pc.short .pthumb{aspect-ratio:9/16;max-height:180px}
+.thumb-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1) 0%,rgba(0,0,0,.5) 100%);pointer-events:none}
+.pplay{position:relative;z-index:2;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s,filter .2s;box-shadow:0 4px 18px rgba(0,0,0,.4)}
+.pc:hover .pplay{transform:scale(1.12);filter:brightness(1.15)}
+.pplay svg{width:22px;height:22px;fill:#fff;margin-left:3px}
+.pinfo{padding:.9rem 1rem;display:flex;align-items:center;justify-content:space-between}
+.ptitle{font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:600}
+.ptype{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--or);background:rgba(255,90,26,.1);border-radius:4px;padding:.15rem .45rem}
+.pgcta{text-align:center;margin-top:2.8rem}
+.pgcta p{color:var(--mu);font-size:.88rem;margin-bottom:1.2rem}
+@media(max-width:900px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.pgrid{grid-template-columns:1fr}}
+
+/* WHY */
+.wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:3rem}
+.wc{background:var(--bg2);border:1px solid var(--brd);border-radius:14px;padding:2.2rem;transition:border-color .2s}
+.wc:hover{border-color:rgba(255,90,26,.3)}
+.wnum{font-family:'Space Grotesk',sans-serif;font-size:2.8rem;font-weight:700;background:linear-gradient(90deg,var(--or),var(--bl2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:.9rem}
+.wt{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;margin-bottom:.5rem}
+.wd{color:var(--mu);font-size:.86rem;line-height:1.7}
+@media(max-width:600px){.wgrid{grid-template-columns:1fr}}
+
+/* TOOLS */
+.trow{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2.5rem}
+.tp{background:var(--bg3);border:1px solid var(--brd);border-radius:50px;padding:.46rem 1.15rem;font-family:'Space Grotesk',sans-serif;font-size:.8rem;font-weight:500;color:var(--mu2);transition:border-color .2s,color .2s}
+.tp:hover{border-color:var(--or);color:var(--tx)}
+
+/* CONTACT */
+#contact{text-align:center}
+#contact .sd{margin:1rem auto 0}
+.ccwrap{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:2.8rem}
+.cc{background:var(--bg2);border:1px solid var(--brd);border-radius:14px;padding:2rem 2.5rem;text-decoration:none;color:var(--tx);transition:border-color .2s,transform .2s;display:flex;flex-direction:column;align-items:center;gap:.55rem;min-width:190px}
+.cc:hover{border-color:var(--or);transform:translateY(-3px)}
+.ccic{font-size:1.9rem}
+.ccm{font-family:'Space Grotesk',sans-serif;font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--or)}
+.ccv{font-size:.87rem;color:var(--mu2)}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--brd);padding:2rem 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fl{font-family:'Space Grotesk',sans-serif;font-size:.98rem;font-weight:700;background:linear-gradient(90deg,var(--or),var(--bl2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+footer p{color:var(--mu);font-size:.77rem}
+
+/* MODAL */
+#vmodal{position:fixed;inset:0;z-index:800;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:5vw}
+#vmodal.on{opacity:1;pointer-events:all}
+.vmi{position:relative;width:100%;max-width:880px}
+.vmi video{width:100%;aspect-ratio:16/9;border:none;border-radius:12px;display:block;background:#000}
+.vmi.short{max-width:380px}
+.vmi.short video{aspect-ratio:9/16}
+.vmclose{position:absolute;top:-2.6rem;right:0;background:none;border:none;color:rgba(255,255,255,.7);font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.06em;cursor:pointer;transition:color .2s}
+.vmclose:hover{color:#fff}
+
+/* SHORTS ROW */
+.shorts-section{margin-top:1.5rem}
+.shorts-label{font-family:'Space Grotesk',sans-serif;font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--bl2);margin-bottom:1rem}
+#sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.sc{background:var(--bg3);border-radius:12px;border:1px solid var(--brd);overflow:hidden;cursor:pointer;transition:transform .22s,border-color .22s}
+.sc:hover{transform:translateY(-4px);border-color:var(--bl2)}
+.sthumb{width:100%;aspect-ratio:9/16;max-height:220px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background-size:cover;background-position:center}
+@media(max-width:700px){#sgrid{grid-template-columns:repeat(2,1fr)}}
+/* REVEAL */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+.rv.on{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<div id="pl">
+  <div>
+    <div class="pl-brand">RJ.</div>
+    <div class="pl-bar"></div>
+  </div>
+</div>
+
+<nav>
+  <a href="#" class="nlogo">RJ Creative</a>
+  <ul class="nlinks" id="nl">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="ncta">Hire Me</a>
+  <button class="ham" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section id="hero">
+  <div class="hbg"><div class="hgrid"></div></div>
+  <div class="hi">
+    <div class="badge"><span class="dot"></span> Available for Projects</div>
+    <h1>Edits That Make<br><span class="hg">People Stay.</span></h1>
+    <p class="hsub">Retention-focused video editing for creators, coaches &amp; brands. Hook design. Smart pacing. Premium visuals — built to grow your channel.</p>
+    <div class="hctas">
+      <a href="#portfolio" class="btor">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        View My Work
+      </a>
+      <a href="https://wa.me/918602579914" target="_blank" rel="noopener" class="btgh">WhatsApp Me →</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="si rv"><div class="sn">8s</div><div class="sl">Hook Engineered</div></div>
+  <div class="si rv"><div class="sn">24h</div><div class="sl">Turnaround</div></div>
+  <div class="si rv"><div class="sn">100%</div><div class="sl">Retention Focus</div></div>
+  <div class="si rv"><div class="sn">Top 1%</div><div class="sl">Quality</div></div>
+</div>
+
+<div class="twrap"><div class="tinner" id="ticker"></div></div>
+
+<section id="about">
+  <div class="phwrap">
+    <div>
+      <div class="ey">Philosophy</div>
+      <div class="phq">Retention is a <em>strategy,</em><br>not luck.</div>
+    </div>
+    <div>
+      <p class="phb">Every cut, every sound effect, every caption placement — it's all engineered around one goal: keeping people watching. I study retention graphs, not just timelines. I edit for the algorithm and for the human behind the screen.</p>
+      <p class="phb" style="margin-top:.9rem">Creators who work with RJ Creative don't just get cleaner edits — they get videos that perform. No fluff. No filler. Just edits that hold attention from frame one.</p>
+      <a href="#contact" class="btor" style="margin-top:2rem;display:inline-flex">Let's Build →</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:var(--bg)">
+  <div class="ey">What I Offer</div>
+  <h2 class="sh">Strategy. Production.<br>Growth — All Covered.</h2>
+  <div class="sgrid">
+    <div class="scard rv"><div class="sic">🎬</div><div class="sname">Long-Form YouTube Editing</div><p class="sdesc">Deep retention editing for 10–60 min videos. Hook structuring, B-roll integration, motion graphics, and pacing that keeps viewers till the very end.</p><span class="stag">YouTube Growth</span></div>
+    <div class="scard rv"><div class="sic">⚡</div><div class="sname">Reels &amp; Shorts</div><p class="sdesc">Vertical short-form edits that stop the scroll. Fast-paced cuts, dynamic captions, trending audio sync — built to beat the algorithm every time.</p><span class="stag">Viral Vertical</span></div>
+    <div class="scard rv"><div class="sic">✨</div><div class="sname">Motion Graphics</div><p class="sdesc">Custom lower thirds, animated intros, kinetic text, and branded overlays that elevate your video from "content" to premium production.</p><span class="stag">Premium Visual</span></div>
+    
+    <div class="scard rv"><div class="sic">💬</div><div class="sname">Animated Captions</div><p class="sdesc">Styled, synced captions that boost accessibility and increase engagement on muted feeds. Fully branded to your style and colour palette.</p><span class="stag">Engagement+</span></div>
+    
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="ey">Selected Work</div>
+  <h2 class="sh">Work That Speaks.</h2>
+  <p class="sd">Click any card to watch. Real edits — judge for yourself.</p>
+  <div class="pgrid" id="pgrid"></div>
+  <div class="shorts-section">
+  <div class="shorts-label">Shorts &amp; Motion</div>
+  <div id="sgrid"></div>
+</div>
+<div class="pgcta">
+    <p>Want results like these for your channel?</p>
+    <a href="#contact" class="btor">Let's Talk →</a>
+  </div>
+</section>
+
+<section id="why" style="background:var(--bg2)">
+  <div class="ey">Why Work With Me</div>
+  <h2 class="sh">Obsessed With<br>Every Frame.</h2>
+  <div class="wgrid">
+    <div class="wc rv"><div class="wnum">01</div><div class="wt">The 8-Second Hook Formula</div><p class="wd">Your first 8 seconds are everything. I engineer the opening to stop the scroll, establish the promise, and lock the viewer in before they even think about leaving.</p></div>
+    <div class="wc rv"><div class="wnum">02</div><div class="wt">Retention-Driven Pacing</div><p class="wd">I read retention graphs, not just timelines. Every cut is intentional — pattern interrupts, b-roll cues, and pacing shifts placed to keep the graph flat.</p></div>
+    <div class="wc rv"><div class="wnum">03</div><div class="wt">Growth Partner, Not Just Editor</div><p class="wd">You're getting a YouTube growth partner. I think about your channel strategy — what should the hook say? What does the thumbnail promise? How does this video fit?</p></div>
+    <div class="wc rv"><div class="wnum">04</div><div class="wt">Fast, Reliable, No Drama</div><p class="wd">24h turnaround on most projects. Clear communication. No ghosting, no missed deadlines. You always know where your edit is and when it lands.</p></div>
+  </div>
+</section>
+
+<section style="background:var(--bg)">
+  <div class="ey">My Stack</div>
+  <h2 class="sh">Tools I Use.</h2>
+  <div class="trow">
+    <span class="tp">Adobe Premiere Pro</span>
+    <span class="tp">After Effects</span>
+    <span class="tp">CapCut</span>
+    <span class="tp">Alight Motion</span>
+    <span class="tp">Adobe Podcast AI</span>
+    <span class="tp">DaVinci Resolve</span>
+    <span class="tp">Canva</span>
+    <span class="tp">Photoshop</span>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="ey">Let's Work</div>
+  <h2 class="sh">Ready to Grow<br>Your Channel?</h2>
+  <p class="sd">No long forms. No agency BS. Just a direct conversation — I reply within a few hours.</p>
+  <div class="ccwrap">
+    <a href="https://wa.me/918602579914" target="_blank" rel="noopener" class="cc rv">
+      <span class="ccic">💬</span>
+      <span class="ccm">WhatsApp</span>
+      <span class="ccv">+91 86025 79914</span>
+    </a>
+    <a href="mailto:hello.rjedits@gmail.com" class="cc rv">
+      <span class="ccic">✉️</span>
+      <span class="ccm">Email</span>
+      <span class="ccv">hello.rjedits@gmail.com</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <a href="#" class="fl">RJ Creative Media</a>
+  <p>© 2025 RJ Creative. Edits That Make People Stay.</p>
+</footer>
+
+<div id="vmodal">
+  <div class="vmi" id="vmi">
+    <button class="vmclose" onclick="closeVid()">✕ CLOSE</button>
+    <video id="vplayer" controls playsinline preload="none"></video>
+  </div>
+</div>
+
+<script>
+// Preloader
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('pl').classList.add('hide'),2200));
+
+// Nav
+document.getElementById('ham').addEventListener('click',function(){document.getElementById('nl').classList.toggle('open')});
+document.querySelectorAll('#nl a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nl').classList.remove('open')));
+
+// Ticker
+const titems=['YouTube Editing','Short-Form Reels','Motion Graphics','Animated Captions','Cinematic B-Roll','Audio Engineering','Hook Design','Brand Videos','Retention Editing','Content Strategy'];
+let th='';
+for(let i=0;i<4;i++) titems.forEach(x=>{th+=`<span>${x}</span><span class="tsep"> ◆ </span>`;});
+document.getElementById('ticker').innerHTML=th;
+
+// Portfolio cards — videos play directly from this site, no YouTube involved
+const vids=[
+  {video:'assets/videos/long1.mp4',poster:'assets/posters/long1_poster.jpg',title:'RJ Edit — Vol. 1',type:'Long Form',short:false,ac:'#FF5A1A'},
+  {video:'assets/videos/long2.mp4',poster:'assets/posters/long2_poster.jpg',title:'RJ Edit — Vol. 2',type:'Long Form',short:false,ac:'#2B6EFF'},
+  {video:'assets/videos/long3.mp4',poster:'assets/posters/long3_poster.jpg',title:'RJ Edit — Vol. 3',type:'Long Form',short:false,ac:'#FF7A40'},
+  {video:'assets/videos/long4.mp4',poster:'assets/posters/long4_poster.jpg',title:'RJ Edit — Vol. 4',type:'Long Form',short:false,ac:'#5C8FFF'},
+];
+const pg=document.getElementById('pgrid');
+vids.forEach((v,i)=>{
+  const el=document.createElement('div');
+  el.className='pc rv';
+  el.innerHTML=`<div class="pthumb" style="background-image:url('${v.poster}')"><div class="thumb-overlay"></div><div class="pplay" style="background:${v.ac}"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3" fill="#fff"/></svg></div></div><div class="pinfo"><span class="ptitle">${v.title}</span><span class="ptype">${v.type}</span></div>`;
+  el.addEventListener('click',()=>openVid(v.video,v.poster,false));
+  pg.appendChild(el);
+});
+
+// Shorts row — all 4 side by side
+const shorts=[
+  {video:'assets/videos/short1.mp4',poster:'assets/posters/short1_poster.jpg',title:'Reel #1',type:'Short',ac:'#FF5A1A'},
+  {video:'assets/videos/short2.mp4',poster:'assets/posters/short2_poster.jpg',title:'Reel #2',type:'Short',ac:'#FF7A40'},
+  {video:'assets/videos/short3.mp4',poster:'assets/posters/short3_poster.jpg',title:'Reel #3',type:'Short',ac:'#2B6EFF'},
+  {video:'assets/videos/short4.mp4',poster:'assets/posters/short4_poster.jpg',title:'Motion Edit',type:'Motion',ac:'#FF5A1A'},
+];
+const sg=document.getElementById('sgrid');
+shorts.forEach(v=>{
+  const el=document.createElement('div');
+  el.className='sc rv';
+  el.innerHTML=`<div class="sthumb" style="background-image:url('${v.poster}')"><div class="thumb-overlay"></div><div class="pplay" style="background:${v.ac}"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3" fill="#fff"/></svg></div></div><div class="pinfo"><span class="ptitle">${v.title}</span><span class="ptype">${v.type}</span></div>`;
+  el.addEventListener('click',()=>openVid(v.video,v.poster,true));
+  sg.appendChild(el);
+});
+
+// Scroll reveal
+const rvs=document.querySelectorAll('.rv');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.1});
+rvs.forEach(el=>obs.observe(el));
+
+// Video modal — plays the actual video file directly, no YouTube/iframe
+function openVid(src,poster,isShort){
+  const vp=document.getElementById('vplayer');
+  vp.poster=poster;
+  vp.src=src;
+  const mi=document.getElementById('vmi');
+  mi.className='vmi'+(isShort?' short':'');
+  document.getElementById('vmodal').classList.add('on');
+  document.body.style.overflow='hidden';
+  vp.play().catch(()=>{});
+}
+function closeVid(){
+  const vp=document.getElementById('vplayer');
+  vp.pause();
+  vp.removeAttribute('src');
+  vp.load();
+  document.getElementById('vmodal').classList.remove('on');
+  document.body.style.overflow='';
+}
+document.getElementById('vmodal').addEventListener('click',e=>{if(e.target.id==='vmodal')closeVid();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVid();});
+</script>
+</body>
+</html>
